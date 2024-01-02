@@ -144,7 +144,7 @@ body {
 .rating__result {
   background-color: var(--bg-btn);
   color: var(--clr-primary-400);
-  padding: 0.5rem 2rem;
+  padding: calc(var(--spacer-1) * 0.5) calc(var(--spacer-1) * 2);
   margin-left: auto;
   margin-right: auto;
   border-radius: 1000px;
@@ -155,7 +155,7 @@ body {
   background-color: var(--bg-btn);
   text-align: center;
   padding: 0;
-  width: 2.5rem;
+  width: calc(var(--spacer-1) * 2.5);
   aspect-ratio: 1;
   border: none;
   border-radius: 50%;
@@ -196,18 +196,17 @@ body {
 
 @media (min-width: 28.125em) {
   body {
-    font-size: min(1.2rem, 5vw);
-    line-height: 1.2;
+    font-size: min(calc(var(--spacer-1) * 1.2), 5vw);
     padding-block: calc(var(--spacer-1) * 3);
   }
 
   .hero__title {
-    font-size: min(2rem, 7vw);
+    font-size: min(calc(var(--spacer-1) * 2), 7vw);
   }
 
   .ratings > * {
-    font-size: 1.5rem;
-    width: 3rem;
+    font-size: calc(var(--spacer-1) * 1.5);
+    width: calc(var(--spacer-1) * 3);
   }
 
   .flow-content > * + * {
@@ -219,7 +218,7 @@ body {
   }
 
   .star img {
-    width: 20px;
+    width: calc(var(--spacer-1) * 1.25);
     aspect-ratio: 1;
   }
 
