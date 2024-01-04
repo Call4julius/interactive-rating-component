@@ -101,6 +101,10 @@ button {
   margin-top: calc(var(--spacer-1) * 1.5);
 }
 
+.m-top {
+  margin-top: 10px;
+}
+
 .hidden {
   display: none;
 }
@@ -128,20 +132,23 @@ body {
   border-radius: var(--br);
 }
 
+.hero__title {
+  color: var(--clr-neutral-400);
+  font-size: calc(var(--spacer-1) * 1.45);
+}
+
+/* RATING STATE STYLES */
+.close-icon {
+  fill: hsl(217, 12%, 63%);
+  width: 20px;
+  aspect-ratio: 1;
+}
+
 .star {
   background-color: var(--bg-btn);
   padding: calc(var(--spacer-1) / 2);
   border-radius: 50%;
   display: inline-block;
-}
-
-.thanks--image {
-  place-self: center;
-}
-
-.hero__title {
-  color: var(--clr-neutral-400);
-  font-size: calc(var(--spacer-1) * 1.45);
 }
 
 .ratings {
@@ -173,14 +180,21 @@ body {
   cursor: pointer;
 }
 
-.ratings li button:is(:hover, :focus) {
+.ratings li button:is(:hover) {
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-neutral-500);
+}
+
+.ratings li button:is(:active, :focus) {
   color: var(--clr-neutral-400);
   background-color: var(--clr-primary-400);
 }
 
-.ratings li button:is(:active) {
-  color: var(--clr-neutral-400);
-  background-color: var(--clr-neutral-500);
+.caution .caution-message {
+  font-size: var(--fs-primary);
+  text-align: center;
+  color: var(--clr-primary-400);
+  margin-top: calc(calc(var(--spacer-1) * 2) - 1);
 }
 
 .button {
@@ -189,7 +203,7 @@ body {
   background-color: var(--clr-primary-400);
   text-transform: uppercase;
   line-height: 0;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
   display: block;
   width: 100%;
   border: 0;
@@ -204,6 +218,24 @@ body {
   background-color: var(--clr-neutral-400);
 }
 
+/* THANK YOU STATE */
+#thank-you-state {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.thanks--image {
+  place-self: center;
+}
+
+/* MEDIA QUERIES */
 @media (min-width: 28.125em) {
   body {
     font-size: min(calc(var(--spacer-1) * 1.2), 5vw);
@@ -225,6 +257,14 @@ body {
 
   .flow-content > * + * {
     margin-top: calc(var(--spacer-1) * 2.5);
+  }
+
+  .m-top {
+    margin-top: 10px;
+  }
+
+  .close-icon {
+    width: 35px;
   }
 
   .star {
