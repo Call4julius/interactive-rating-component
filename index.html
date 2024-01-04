@@ -23,7 +23,7 @@
   <main class="main-content d-grid">
     <div id="rating-state" class="container flow-content hero">
       <div class="star">
-        <img aria-label="star icon" src="images/icon-star.svg" alt="">
+        <img src="images/icon-star.svg" alt="">
       </div>
       <h1 class="hero__title">How did we do?</h1>
       <p class="hero__text">Please let us know how we did with your support request. All feedback is appreciated
@@ -35,13 +35,21 @@
         <li><button>4</button></li>
         <li><button>5</button></li>
       </ul>
+      <div class="caution hidden">
+        <p class="caution-message">Kindly rate us by clicking a number and then submit.</p>
+      </div>
       <button class="button">submit</button>
     </div>
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
     <div id="thank-you-state" class="container d-grid flow-content text-center hero hidden">
-      <img class="thanks--image" aria-label="thank's for rating" src="images/illustration-thank-you.svg" alt="">
+      <div class="close-btn">
+        <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+          <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+        </svg>
+      </div>
+      <img class="thanks--image" src="images/illustration-thank-you.svg" alt="">
       <p class="rating__result">You selected <span class="score"></span> out of 5</p>
       <h1 class="hero__title">Thank you!</h1>
       <p class="hero__text">We appreciate you taking the time to give a rating. If you ever need more support,
