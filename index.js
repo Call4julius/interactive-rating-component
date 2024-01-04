@@ -2,15 +2,18 @@
 
 // variables
 let ratingNumber;
-let ratings = document.querySelector(".ratings");
-let submit = document.querySelector(".button");
-let closeThankYou = document.querySelector(".close-btn");
-let caution = document.querySelector(".caution");
+const ratings = document.querySelector(".ratings");
+const submit = document.querySelector(".button");
+const closeThankYou = document.querySelector(".close-btn");
+const caution = document.querySelector(".caution");
 
 ratings.addEventListener("click", (e) => {
     ratingNumber = e.target.innerText;
-    submit.classList.remove("m-top");
-    caution.classList.add("hidden");
+
+    if (submit.classList.contains("m-top")) {
+        submit.classList.remove("m-top");
+        caution.classList.add("hidden");
+    }
 });
 
 submit.addEventListener("click", () => {
