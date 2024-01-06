@@ -21,24 +21,28 @@
 
   <!-- Rating state start -->
   <main class="main-content d-grid">
-    <div id="rating-state" class="container flow-content hero">
-      <div class="star">
-        <img src="images/icon-star.svg" alt="">
+    <div id="rating-state" class="container hero">
+      <div class="flow-content">
+        <div class="star">
+          <img src="images/icon-star.svg" alt="">
+        </div>
+        <h1 class="hero__title">How did we do?</h1>
+        <p class="hero__text">Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!</p>
+        <ul class="ratings d-flex">
+          <li><button>1</button></li>
+          <li><button>2</button></li>
+          <li><button>3</button></li>
+          <li><button>4</button></li>
+          <li><button>5</button></li>
+        </ul>
       </div>
-      <h1 class="hero__title">How did we do?</h1>
-      <p class="hero__text">Please let us know how we did with your support request. All feedback is appreciated
-        to help us improve our offering!</p>
-      <ul class="ratings d-flex">
-        <li><button>1</button></li>
-        <li><button>2</button></li>
-        <li><button>3</button></li>
-        <li><button>4</button></li>
-        <li><button>5</button></li>
-      </ul>
-      <div class="caution hidden">
-        <p class="caution-message">Kindly rate us by clicking a number and then submit.</p>
+      <div>
+        <p class="hidden caution-message">Select a number before submiting.</p>
+        <button id="button" class="button">
+          <p>submit</p>
+        </button>
       </div>
-      <button class="button">submit</button>
     </div>
     <!-- Rating state end -->
 
