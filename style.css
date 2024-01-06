@@ -142,11 +142,8 @@ body {
   display: inline-block;
 }
 
-.ratings {
+ul[class*="ratings"] {
   justify-content: space-between;
-}
-
-.ratings li {
   margin-top: calc(var(--spacer-1) * 2);
 }
 
