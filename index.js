@@ -3,23 +3,24 @@
 // variables
 let ratingNumber;
 const ratings = document.querySelector(".ratings");
-const submit = document.querySelector(".button");
+const cautionMessage = document.querySelector(".caution-message");
+const submitButton = document.querySelector(".button");
 const closeThankYou = document.querySelector(".close-btn");
-const caution = document.querySelector(".caution");
 
+// event listeners
 ratings.addEventListener("click", (e) => {
     ratingNumber = e.target.innerText;
 
-    if (submit.classList.contains("m-top")) {
-        submit.classList.remove("m-top");
-        caution.classList.add("hidden");
+    if (!cautionMessage.classList.contains("hidden")) {
+        document.getElementById("button").style.marginTop = "";
+        cautionMessage.classList.add("hidden");
     }
 });
 
-submit.addEventListener("click", () => {
+submitButton.addEventListener("click", () => {
     if (ratingNumber == null) {
-        submit.classList.add("m-top")
-        caution.classList.remove("hidden");
+        document.getElementById("button").style.marginTop = "10px";
+        cautionMessage.classList.remove("hidden");
     } else {
         document.querySelector(".score").innerText = ratingNumber;
         document.querySelector("#rating-state").classList.add("hidden");
